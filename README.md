@@ -1,6 +1,6 @@
 # ROS-Nodes-for-Image-Counting
 //Image Publisher Node (image_publisher_node.py):
-#!/usr/bin/env python3
+#!/usr/bin/env python3 //
 
 import rospy
 from sensor_msgs.msg import Image
@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
         
 //Image Counter Node (image_counter_node.py):
-#!/usr/bin/env python3
+#!/usr/bin/env python3//
 
 import rospy
 from std_msgs.msg import Empty, String
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     except rospy.ROSInterruptException:
         pass
 //Image Path Saver Node (image_path_saver_node.py):
-#!/usr/bin/env python3
+#!/usr/bin/env python3//
 
 import rospy
 from std_msgs.msg import String
@@ -116,14 +116,14 @@ if __name__ == '__main__':
         rospy.spin()
     except rospy.ROSInterruptException:
         pass
-//Run the Image Publisher Node:
+//Run the Image Publisher Node://
 $ chmod +x image_publisher_node.py
 $ rosrun your_package_name image_publisher_node.py
-//Run the Image Counter Node:
+//Run the Image Counter Node://
 $ chmod +x image_counter_node.py
 $ rosrun your_package_name image_counter_node.py
-//Run the Image Path Saver Node:
+//Run the Image Path Saver Node://
 $ chmod +x image_path_saver_node.py
 $ rosrun your_package_name image_path_saver_node.py
-//To reset the counter and clear the image path file, open a new terminal and publish an empty message to the "/reset" topic:
+//To reset the counter and clear the image path file, open a new terminal and publish an empty message to the "/reset" topic://
 $ rostopic pub /reset std_msgs/Empty "{}"
